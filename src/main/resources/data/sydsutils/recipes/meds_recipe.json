@@ -1,0 +1,25 @@
+{
+  "group": "sydsutils",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "sydsutils:bandage"
+    },
+    {
+      "item": "sydsutils:bandage"
+    },
+    {
+      "item": "sydsutils:bandage"
+    },
+    {
+      "item": "minecraft:apple"
+    },
+    {
+      "item": "minecraft:wheat_seeds"
+    }
+  ],
+  "result": {
+    "item": "sydsutils:meds",
+    "count": 2
+  }
+}

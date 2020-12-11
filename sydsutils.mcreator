@@ -412,6 +412,221 @@
           }
         ]
       }
+    },
+    {
+      "name": "BandageUsed",
+      "type": "procedure",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bandage_used",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Bandage",
+      "type": "item",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bandage"
+    },
+    {
+      "name": "BandageRecipe",
+      "type": "recipe",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bandage_recipe"
+    },
+    {
+      "name": "MedsUsed",
+      "type": "procedure",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "meds_used",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Meds",
+      "type": "item",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "meds"
+    },
+    {
+      "name": "MedsRecipe",
+      "type": "recipe",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "meds_recipe"
+    },
+    {
+      "name": "AdminItem",
+      "type": "item",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "admin_item"
+    },
+    {
+      "name": "GodMode",
+      "type": "procedure",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "god_mode",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Godmone",
+      "type": "command",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "godmone"
+    },
+    {
+      "name": "Gmcexecuted",
+      "type": "procedure",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "gmcexecuted",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Gamemodecreative",
+      "type": "command",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "gamemodecreative"
+    },
+    {
+      "name": "NoAdminItem",
+      "type": "gui",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "no_admin_item"
+    },
+    {
+      "name": "CloseAnyGUI",
+      "type": "procedure",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "close_any_gui",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Gmsexecuted",
+      "type": "procedure",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "gmsexecuted",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Gamemodesurvival",
+      "type": "command",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "gamemodesurvival"
     }
   ],
   "variable_elements": [],
@@ -419,12 +634,15 @@
   "language_map": {
     "en_us": {
       "item.sydsutils.coffee": "Coffee",
+      "item.sydsutils.bandage": "Bandage",
       "item.sydsutils.guide_1_spawn_egg": "Guide 1 Spawn Egg",
       "item.sydsutils.dimension_switcher": "Dimension Switcher",
       "itemGroup.tabmedical": "SU - Medical Items",
       "item.sydsutils.medkit": "Medkit",
       "key.mcreator.spawn_guide": "Spawn Guide",
+      "item.sydsutils.admin_item": "Admin Item",
       "itemGroup.tabfood": "SU - Food",
+      "item.sydsutils.meds": "Meds",
       "entity.tibbiesmod.guide_1": "Guide 1",
       "entity.sydsutils.guide_1": "Guide 1",
       "itemGroup.tabdimensional_objects": "SU - Dimensional Objects",
@@ -448,7 +666,7 @@
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.15.2",
     "credits": "Created by Sydney",
-    "modElementsPackage": "net.syd.tibbiesmod",
+    "modElementsPackage": "net.syd.utils",
     "lockBaseModFiles": false
   },
   "mcreatorVersion": 202000547520
