@@ -1,0 +1,132 @@
+{
+  "_fv": 13,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 228,
+    "height": 168,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Welcome to Syd's Utils!",
+          "color": {
+            "value": -13421773,
+            "falpha": 0.0
+          },
+          "name": "Welcome to Syd's Utils!",
+          "x": 152,
+          "y": 51
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "You can find our social media below",
+          "color": {
+            "value": -13421773,
+            "falpha": 0.0
+          },
+          "name": "You can find our social media below",
+          "x": 124,
+          "y": 69
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "DISCORD: https://discord.gg/HvsMFQYKpf",
+          "color": {
+            "value": -65281,
+            "falpha": 0.0
+          },
+          "name": "DISCORD: https://discord.gg/HvsMFQYKpf",
+          "x": 117,
+          "y": 94
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "-=-=-=-=-=-=-=-=-",
+          "color": {
+            "value": -10066177,
+            "falpha": 0.0
+          },
+          "name": "-=-=-=-=-=-=-=-=-",
+          "x": 166,
+          "y": 80
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Website: SydneyM.dev/utils",
+          "color": {
+            "value": -16737895,
+            "falpha": 0.0
+          },
+          "name": "Website: SydneyM.dev/utils",
+          "x": 116,
+          "y": 107
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Recipes: Sydneym.dev/util-recipes",
+          "color": {
+            "value": -16737997,
+            "falpha": 0.0
+          },
+          "name": "Recipes: Sydneym.dev/util-recipes",
+          "x": 117,
+          "y": 120
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "The Doctor is in",
+          "onClick": {
+            "name": "MercyKek"
+          },
+          "width": 105,
+          "height": 20,
+          "name": "The Doctor is in",
+          "x": 216,
+          "y": 173
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Ok, bye!",
+          "onClick": {
+            "name": "CloseGUI"
+          },
+          "width": 65,
+          "height": 20,
+          "name": "Ok, bye!",
+          "x": 107,
+          "y": 173
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": ">>",
+          "width": 35,
+          "height": 20,
+          "name": ">>",
+          "x": 177,
+          "y": 173
+        }
+      }
+    ]
+  }
+}

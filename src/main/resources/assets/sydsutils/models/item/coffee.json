@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "sydsutils:items/coffee_instead_of_milk"
+  }
+}
