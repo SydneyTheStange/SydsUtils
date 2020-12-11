@@ -660,7 +660,9 @@
     "websiteURL": "https://sydneym.dev",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
-    "requiredMods": [],
+    "requiredMods": [
+      "net.syd.core"
+    ],
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [],

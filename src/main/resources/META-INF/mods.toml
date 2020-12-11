@@ -20,5 +20,11 @@ An all in one sort of mod
     side="BOTH"
 
 
+[[dependencies.sydsutils]]
+    modId="net.syd.core"
+    mandatory=true
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 
 
