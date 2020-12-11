@@ -3,8 +3,10 @@ package net.syd.tibbiesmod.gui;
 
 import org.lwjgl.opengl.GL11;
 
-import net.syd.tibbiesmod.procedures.MercyKekProcedure;
-import net.syd.tibbiesmod.procedures.CloseGUIProcedure;
+import net.syd.tibbiesmod.procedures.GoToVazhlandProcedure;
+import net.syd.tibbiesmod.procedures.GoToOverworldProcedure;
+import net.syd.tibbiesmod.procedures.GoToNetherProcedure;
+import net.syd.tibbiesmod.procedures.GoToEndProcedure;
 import net.syd.tibbiesmod.SydsutilsModElements;
 import net.syd.tibbiesmod.SydsutilsMod;
 
@@ -39,11 +41,11 @@ import java.util.Map;
 import java.util.HashMap;
 
 @SydsutilsModElements.ModElement.Tag
-public class Guide1WelcomeGui extends SydsutilsModElements.ModElement {
+public class DimensionPickerGui extends SydsutilsModElements.ModElement {
 	public static HashMap guistate = new HashMap();
 	private static ContainerType<GuiContainerMod> containerType = null;
-	public Guide1WelcomeGui(SydsutilsModElements instance) {
-		super(instance, 3);
+	public DimensionPickerGui(SydsutilsModElements instance) {
+		super(instance, 19);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,
@@ -59,7 +61,7 @@ public class Guide1WelcomeGui extends SydsutilsModElements.ModElement {
 
 	@SubscribeEvent
 	public void registerContainer(RegistryEvent.Register<ContainerType<?>> event) {
-		event.getRegistry().register(containerType.setRegistryName("guide_1_welcome"));
+		event.getRegistry().register(containerType.setRegistryName("dimension_picker"));
 	}
 	public static class GuiContainerModFactory implements IContainerFactory {
 		public GuiContainerMod create(int id, PlayerInventory inv, PacketBuffer extraData) {
@@ -110,10 +112,10 @@ public class Guide1WelcomeGui extends SydsutilsModElements.ModElement {
 			this.y = container.y;
 			this.z = container.z;
 			this.entity = container.entity;
-			this.xSize = 228;
-			this.ySize = 168;
+			this.xSize = 300;
+			this.ySize = 166;
 		}
-		private static final ResourceLocation texture = new ResourceLocation("sydsutils:textures/guide_1_welcome.png");
+		private static final ResourceLocation texture = new ResourceLocation("sydsutils:textures/dimension_picker.png");
 		@Override
 		public void render(int mouseX, int mouseY, float partialTicks) {
 			this.renderBackground();
@@ -146,13 +148,10 @@ public class Guide1WelcomeGui extends SydsutilsModElements.ModElement {
 
 		@Override
 		protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-			this.font.drawString("Welcome to Syd's Utils!", 52, 15, -13421773);
-			this.font.drawString("You can find our social media below", 24, 33, -13421773);
-			this.font.drawString("DISCORD: https://discord.gg/HvsMFQYKpf", 17, 58, -65281);
-			this.font.drawString("-=-=-=-=-=-=-=-=-", 66, 44, -10066177);
-			this.font.drawString("Website: SydneyM.dev/utils", 16, 71, -16737895);
-			this.font.drawString("Recipes: Sydneym.dev/util-recipes", 17, 84, -16737997);
-			this.font.drawString("Issue Tracker: Sydneym.dev/utils-bugs", 16, 97, -3407872);
+			this.font.drawString("Hello, The Chosen One. Where would you like to go today?", 6, 9, -16777216);
+			this.font.drawString("Pick a dimension", 106, 28, -16777114);
+			this.font.drawString("WARNING! THIS IS A BETA FEATURE", 70, 132, -65536);
+			this.font.drawString("! Do not select the dimension you are in now !", 33, 148, -65536);
 		}
 
 		@Override
@@ -165,17 +164,21 @@ public class Guide1WelcomeGui extends SydsutilsModElements.ModElement {
 		public void init(Minecraft minecraft, int width, int height) {
 			super.init(minecraft, width, height);
 			minecraft.keyboardListener.enableRepeatEvents(true);
-			this.addButton(new Button(this.guiLeft + 116, this.guiTop + 137, 105, 20, "The Doctor is in", e -> {
+			this.addButton(new Button(this.guiLeft + 12, this.guiTop + 75, 70, 20, "Overworld", e -> {
 				SydsutilsMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(0, x, y, z));
 				handleButtonAction(entity, 0, x, y, z);
 			}));
-			this.addButton(new Button(this.guiLeft + 7, this.guiTop + 137, 65, 20, "Ok, bye!", e -> {
+			this.addButton(new Button(this.guiLeft + 110, this.guiTop + 75, 75, 20, "The Nether", e -> {
 				SydsutilsMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(1, x, y, z));
 				handleButtonAction(entity, 1, x, y, z);
 			}));
-			this.addButton(new Button(this.guiLeft + 77, this.guiTop + 137, 35, 20, ">>", e -> {
+			this.addButton(new Button(this.guiLeft + 219, this.guiTop + 76, 60, 20, "The End", e -> {
 				SydsutilsMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(2, x, y, z));
 				handleButtonAction(entity, 2, x, y, z);
+			}));
+			this.addButton(new Button(this.guiLeft + 116, this.guiTop + 105, 65, 20, "Vazhland", e -> {
+				SydsutilsMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(3, x, y, z));
+				handleButtonAction(entity, 3, x, y, z);
 			}));
 		}
 	}
@@ -270,14 +273,28 @@ public class Guide1WelcomeGui extends SydsutilsModElements.ModElement {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
-				MercyKekProcedure.executeProcedure($_dependencies);
+				GoToOverworldProcedure.executeProcedure($_dependencies);
 			}
 		}
 		if (buttonID == 1) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
-				CloseGUIProcedure.executeProcedure($_dependencies);
+				GoToNetherProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (buttonID == 2) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				GoToEndProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (buttonID == 3) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				GoToVazhlandProcedure.executeProcedure($_dependencies);
 			}
 		}
 	}

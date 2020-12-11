@@ -1,12 +1,15 @@
 {
   "item.sydsutils.coffee": "Coffee",
-  "itemGroup.tabfood": "SU - Food",
   "item.sydsutils.guide_1_spawn_egg": "Guide 1 Spawn Egg",
+  "item.sydsutils.dimension_switcher": "Dimension Switcher",
   "itemGroup.tabmedical": "SU - Medical Items",
-  "entity.tibbiesmod.guide_1": "Guide 1",
-  "entity.sydsutils.guide_1": "Guide 1",
   "item.sydsutils.medkit": "Medkit",
   "key.mcreator.spawn_guide": "Spawn Guide",
+  "itemGroup.tabfood": "SU - Food",
+  "entity.tibbiesmod.guide_1": "Guide 1",
+  "entity.sydsutils.guide_1": "Guide 1",
+  "itemGroup.tabdimensional_objects": "SU - Dimensional Objects",
+  "item.sydsutils.vazhland": "Portal Summoner",
   "itemGroup.tabguides": "SU - Guides",
   "item.tibbiesmod.guide_1_spawn_egg": "Guide 1 Spawn Egg"
 }

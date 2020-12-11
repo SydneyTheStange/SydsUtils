@@ -8,7 +8,7 @@
     "name": "Medkit",
     "rarity": "COMMON",
     "creativeTab": {
-      "value": "MISC"
+      "value": "CUSTOM:Medical"
     },
     "stackSize": 64,
     "enchantability": 0,

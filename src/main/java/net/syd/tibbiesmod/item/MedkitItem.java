@@ -3,6 +3,7 @@ package net.syd.tibbiesmod.item;
 
 import net.syd.tibbiesmod.procedures.OPMedkitCheckProcedure;
 import net.syd.tibbiesmod.procedures.MedkitUsedProcedure;
+import net.syd.tibbiesmod.itemgroup.MedicalItemGroup;
 import net.syd.tibbiesmod.SydsutilsModElements;
 
 import net.minecraftforge.registries.ObjectHolder;
@@ -16,7 +17,6 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemUseContext;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
@@ -39,7 +39,7 @@ public class MedkitItem extends SydsutilsModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(ItemGroup.MISC).maxStackSize(64).rarity(Rarity.COMMON));
+			super(new Item.Properties().group(MedicalItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
 			setRegistryName("medkit");
 		}
 

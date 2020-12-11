@@ -1,0 +1,32 @@
+{
+  "_fv": 13,
+  "_type": "item",
+  "definition": {
+    "renderType": 0,
+    "texture": "dark_magic_staff_wood",
+    "customModelName": "Normal",
+    "name": "Dimension Switcher",
+    "rarity": "EPIC",
+    "creativeTab": {
+      "value": "CUSTOM:DimensionalObjects"
+    },
+    "stackSize": 64,
+    "enchantability": 0,
+    "useDuration": 0,
+    "toolType": 1.0,
+    "damageCount": 0,
+    "recipeRemainder": {
+      "value": ""
+    },
+    "destroyAnyBlock": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "enableMeleeDamage": true,
+    "damageVsEntity": 3.0,
+    "specialInfo": [],
+    "hasGlow": true,
+    "guiBoundTo": "DimensionPicker",
+    "inventorySize": 0,
+    "inventoryStackSize": 64
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "axis=z": {
+      "model": "sydsutils:block/vazhland_portal_ew"
+    },
+    "axis=x": {
+      "model": "sydsutils:block/vazhland_portal_ns"
+    }
+  }
+}

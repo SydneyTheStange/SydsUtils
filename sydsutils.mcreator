@@ -308,6 +308,110 @@
           }
         ]
       }
+    },
+    {
+      "name": "MainDimension",
+      "type": "dimension",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "vazhland"
+    },
+    {
+      "name": "DimensionSwitcher",
+      "type": "item",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dimension_switcher"
+    },
+    {
+      "name": "DimensionPicker",
+      "type": "gui",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dimension_picker"
+    },
+    {
+      "name": "DimensionalObjects",
+      "type": "tab",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dimensional_objects"
+    },
+    {
+      "name": "GoToOverworld",
+      "type": "procedure",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "go_to_overworld",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GoToNether",
+      "type": "procedure",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "go_to_nether",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GoToEnd",
+      "type": "procedure",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "go_to_end",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GoToVazhland",
+      "type": "procedure",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "go_to_vazhland",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -315,13 +419,16 @@
   "language_map": {
     "en_us": {
       "item.sydsutils.coffee": "Coffee",
-      "itemGroup.tabfood": "SU - Food",
       "item.sydsutils.guide_1_spawn_egg": "Guide 1 Spawn Egg",
+      "item.sydsutils.dimension_switcher": "Dimension Switcher",
       "itemGroup.tabmedical": "SU - Medical Items",
-      "entity.tibbiesmod.guide_1": "Guide 1",
-      "entity.sydsutils.guide_1": "Guide 1",
       "item.sydsutils.medkit": "Medkit",
       "key.mcreator.spawn_guide": "Spawn Guide",
+      "itemGroup.tabfood": "SU - Food",
+      "entity.tibbiesmod.guide_1": "Guide 1",
+      "entity.sydsutils.guide_1": "Guide 1",
+      "itemGroup.tabdimensional_objects": "SU - Dimensional Objects",
+      "item.sydsutils.vazhland": "Portal Summoner",
       "itemGroup.tabguides": "SU - Guides",
       "item.tibbiesmod.guide_1_spawn_egg": "Guide 1 Spawn Egg"
     }
