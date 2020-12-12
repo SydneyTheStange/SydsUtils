@@ -627,6 +627,57 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "gamemodesurvival"
+    },
+    {
+      "name": "CheckGUII",
+      "type": "gui",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "check_guii"
+    },
+    {
+      "name": "OpenCheck",
+      "type": "procedure",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "open_check",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Check",
+      "type": "command",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "check"
     }
   ],
   "variable_elements": [],
@@ -660,9 +711,7 @@
     "websiteURL": "https://sydneym.dev",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
-    "requiredMods": [
-      "net.syd.core"
-    ],
+    "requiredMods": [],
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [],
