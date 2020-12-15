@@ -151,8 +151,8 @@ public class CheckGUIIGui extends SydsutilsModElements.ModElement {
 		protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
 			this.font.drawString("Yep! Syd's Utils is properly installed!", 154, 21, -16737895);
 			this.font.drawString("Need help? Check with the Guide for more information", 126, 49, -16777216);
-			this.font.drawString("Want to donate to keep the devs awake?", 186, 94, -16777216);
-			this.font.drawString("SydneyM.dev/paypal", 219, 107, -16777012);
+			this.font.drawString("Want to donate to keep me awake?", 186, 94, -16777216);
+			this.font.drawString("EEEEEEEEEEEEEEE", 219, 107, -16777012);
 		}
 
 		@Override
